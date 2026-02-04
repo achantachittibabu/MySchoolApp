@@ -64,6 +64,22 @@ const HomeScreen = ({ navigation, route }) => {
       color: '#FF5722',
       action: () => navigation.navigate('Detail', { type: 'Contact Us' }),
     },
+    {
+      id: 7,
+      title: 'Fee Details',
+      description: 'View fee structure and payment status',
+      icon: 'currency-inr',
+      color: '#00BCD4',
+      action: () => navigation.navigate('FeeDetails'),
+    },
+    {
+      id: 8,
+      title: 'Attendance',
+      description: 'Check attendance records and statistics',
+      icon: 'clipboard-check',
+      color: '#FF9800',
+      action: () => navigation.navigate('Attendance'),
+    },
   ];
 
   const capitalizeUserType = userType.charAt(0).toUpperCase() + userType.slice(1);

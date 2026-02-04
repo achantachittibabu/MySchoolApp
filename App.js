@@ -14,6 +14,11 @@ import AdminRegistrationScreen from './screens/AdminRegistrationScreen';
 import SuccessScreen from './screens/SuccessScreen';
 import FailureScreen from './screens/FailureScreen';
 import DetailScreen from './screens/DetailScreen';
+import FeeDetailsScreen from './screens/FeeDetailsScreen';
+import FeeRegisterScreen from './screens/FeeRegisterScreen';
+import AttendanceScreen from './screens/AttendanceScreen';
+import AttendanceAddScreen from './screens/AttendanceAddScreen';
+import AttendanceViewScreen from './screens/AttendanceViewScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -99,6 +104,31 @@ export default function App() {
             options={({ route }) => ({
               title: `${route.params?.type} Details`,
             })}
+          />
+          <Stack.Screen
+            name="FeeDetails"
+            component={FeeDetailsScreen}
+            options={{ title: 'Fee Details' }}
+          />
+          <Stack.Screen
+            name="FeeRegister"
+            component={FeeRegisterScreen}
+            options={{ title: 'Fee Registration' }}
+          />
+          <Stack.Screen
+            name="Attendance"
+            component={AttendanceScreen}
+            options={{ title: 'Attendance' }}
+          />
+          <Stack.Screen
+            name="AttendanceAdd"
+            component={AttendanceAddScreen}
+            options={{ title: 'Add Attendance' }}
+          />
+          <Stack.Screen
+            name="AttendanceView"
+            component={AttendanceViewScreen}
+            options={{ title: 'View Attendance' }}
           />
         </Stack.Navigator>
       </NavigationContainer>
